@@ -1,0 +1,49 @@
+".source.sqr":
+  heading:
+    prefix: "head"
+    body: '''
+      begin-heading $1
+      	$2
+      end-heading
+
+    '''
+  procedure:
+    prefix: "proc"
+    body: '''
+      begin-procedure $1 ($2)
+      	$3
+      end-procedure
+
+    '''
+  report:
+    prefix: "rep"
+    body: '''
+      begin-report
+      	$1
+      end-report
+
+    '''
+  select:
+    prefix: "sel"
+    body: '''
+      begin-select
+      	$1
+      end-select
+
+    '''
+  sql:
+    prefix: "sql"
+    body: '''
+      begin-sql $1
+      	$2
+      end-sql
+
+    '''
+  if:
+    prefix: "if"
+    body: '''
+      if $1
+      	$2
+      end-if
+
+    '''

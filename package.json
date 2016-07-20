@@ -1,0 +1,14 @@
+{
+  "name": "language-sqr",
+  "version": "0.0.0",
+  "description": "SQR language support in Atom",
+  "keywords": [
+    "peoplesoft",
+    "sqr"
+  ],
+  "repository": "https://github.com/whanwells/language-sqr",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

@@ -1,72 +1,72 @@
-scopeName: "source.sqr"
-name: "SQR"
-fileTypes: [
-  "sqr"
-  "sqc"
+'scopeName': 'source.sqr'
+'name': 'SQR'
+'fileTypes': [
+  'sqr'
+  'sqc'
 ]
-foldingStartMarker: "(?i)^\\s*+(begin-procedure|if|begin-report|begin-heading|begin-select|begin-sql|#ifdef).*"
-foldingStopMarker: "(?i)^\\s*+(end-procedure|end-if|end-report|end-heading|end-select|end-sql|#end-if).*"
-patterns: [
+'foldingStartMarker': '(?i)^\\s*+(begin-procedure|if|begin-report|begin-heading|begin-select|begin-sql|#ifdef).*'
+'foldingStopMarker': '(?i)^\\s*+(end-procedure|end-if|end-report|end-heading|end-select|end-sql|#end-if).*'
+'patterns': [
   {
-    match: "!.*\\n"
-    name: "comment.line.double-slash.SQR"
+    'match': '!.*\\n'
+    'name': 'comment.line.double-slash.SQR'
   }
   {
-    match: "(?i)\\b(?:end-if|let|begin-procedure|end-procedure|do|show|else|call|using|print|goto|begin-report|end-report|begin-heading|end-heading|end-select|end-sql|begin-select|begin-sql|if)\\b"
-    name: "keyword.control.SQR"
+    'match': '(?i)\\b(?:end-if|let|begin-procedure|end-procedure|do|show|else|call|using|print|goto|begin-report|end-report|begin-heading|end-heading|end-select|end-sql|begin-select|begin-sql|if)\\b'
+    'name': 'keyword.control.SQR'
   }
   {
-    match: '(?i)#\\b(?:ifdef|end-if)\\b'
-    name: 'keyword.control.SQR'
+    'match': '(?i)#\\b(?:ifdef|end-if)\\b'
+    'name': 'keyword.control.SQR'
   }
   {
-    begin: "#include"
-    captures:
-      "1":
-        name: "keyword.control.import.include.SQR"
-    end: "(?=(?://|/\\*))|$"
-    name: "meta.preprocessor.SQR.include"
-    patterns: [
+    'begin': '#include'
+    'captures':
+      '1':
+        'name': 'keyword.control.import.include.SQR'
+    'end': '(?=(?://|/\\*))|$'
+    'name': 'meta.preprocessor.SQR.include'
+    'patterns': [
       {
-        match: "(?>\\\\\\s*\\n)"
-        name: "punctuation.separator.continuation.SQR"
+        'match': '(?>\\\\\\s*\\n)'
+        'name': 'punctuation.separator.continuation.SQR'
       }
       {
-        begin: "\""
-        beginCaptures:
-          "0":
-            name: "punctuation.definition.string.begin.SQR"
-        end: "\""
-        endCaptures:
-          "0":
-            name: "punctuation.definition.string.end.SQR"
-        name: "string.quoted.double.include.SQR"
-      }
-    ]
-  }
-  {
-    match: "(#|\\$)[\\w-]+"
-    name: "variable.language.SQR"
-  }
-  {
-    begin: "\""
-    end: "\""
-    name: "string.quoted.double.SQR"
-    patterns: [
-      {
-        match: "\\\\."
-        name: "constant.character.escape.SQR"
+        'begin': '"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.SQR'
+        'end': '"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.SQR'
+        'name': 'string.quoted.double.include.SQR'
       }
     ]
   }
   {
-    begin: "'"
-    end: "'"
-    name: "string.quoted.single.SQR"
-    patterns: [
+    'match': '(#|\\$)[\\w-]+'
+    'name': 'variable.language.SQR'
+  }
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.double.SQR'
+    'patterns': [
       {
-        match: "\\\\."
-        name: "constant.character.escape.SQR"
+        'match': '\\\\.'
+        'name': 'constant.character.escape.SQR'
+      }
+    ]
+  }
+  {
+    'begin': '\''
+    'end': '\''
+    'name': 'string.quoted.single.SQR'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.SQR'
       }
     ]
   }

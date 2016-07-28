@@ -52,17 +52,6 @@
     'name': 'variable.language.sqr'
   }
   {
-    'begin': '"'
-    'end': '"'
-    'name': 'string.quoted.double.sqr'
-    'patterns': [
-      {
-        'match': '\\\\.'
-        'name': 'constant.character.escape.sqr'
-      }
-    ]
-  }
-  {
     'begin': '\''
     'end': '\''
     'name': 'string.quoted.single.sqr'

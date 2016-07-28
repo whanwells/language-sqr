@@ -1,3 +1,7 @@
+### 0.6.0
+  - All variable types are recognized
+  - Escaped single quotes are now highlighted in string literals
+
 ### 0.5.0
   - Toggle comment support
 

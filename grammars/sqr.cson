@@ -48,8 +48,11 @@
     ]
   }
   {
-    'match': '(#|\\$)[\\w-]+'
-    'name': 'variable.language.sqr'
+    'captures':
+      '1':
+        'name': 'punctuation.definition.variable.sqr'
+    'match': '(#|\\$|&|%|@)[\\w-]+'
+    'name': 'variable.other.sqr'
   }
   {
     'begin': '\''

@@ -17,11 +17,12 @@ describe 'SQR grammar', ->
     expect(tokens[1]).toEqual value: ' foo', scopes: ['source.sqr', 'comment.line.bang.sqr']
 
   it 'tokenizes variables', ->
-    glyphs = ['#', '$']
+    glyphs = ['#', '$', '&', '%', '@']
 
     for glyph in glyphs
       {tokens} = grammar.tokenizeLine "#{glyph}foo"
-      expect(tokens[0]).toEqual value: "#{glyph}foo", scopes: ['source.sqr', 'variable.language.sqr']
+      expect(tokens[0]).toEqual value: glyph, scopes: ['source.sqr', 'variable.other.sqr', 'punctuation.definition.variable.sqr']
+      expect(tokens[1]).toEqual value: 'foo', scopes: ['source.sqr', 'variable.other.sqr']
 
   it 'tokenizes keywords', ->
     keywords = [

@@ -53,11 +53,17 @@
   }
   {
     'begin': '\''
-    'end': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.sqr'
+    'end': '\'(?!\')'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.sqr'
     'name': 'string.quoted.single.sqr'
     'patterns': [
       {
-        'match': '\\\\.'
+        'match': '\'\''
         'name': 'constant.character.escape.sqr'
       }
     ]

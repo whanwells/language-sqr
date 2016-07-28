@@ -57,7 +57,9 @@ describe 'SQR grammar', ->
     expect(tokens[0]).toEqual value: '#include', scopes: ['source.sqr', 'meta.preprocessor.sqr.include']
 
   it 'tokenizes strings', ->
-    {tokens} = grammar.tokenizeLine "'foo'"
-    expect(tokens[0]).toEqual value: "'", scopes: ['source.sqr', 'string.quoted.single.sqr']
+    {tokens} = grammar.tokenizeLine "'foo''bar'"
+    expect(tokens[0]).toEqual value: "'", scopes: ['source.sqr', 'string.quoted.single.sqr', 'punctuation.definition.string.begin.sqr']
     expect(tokens[1]).toEqual value: 'foo', scopes: ['source.sqr', 'string.quoted.single.sqr']
-    expect(tokens[2]).toEqual value: "'", scopes: ['source.sqr', 'string.quoted.single.sqr']
+    expect(tokens[2]).toEqual value: "''", scopes: ['source.sqr', 'string.quoted.single.sqr', 'constant.character.escape.sqr']
+    expect(tokens[3]).toEqual value: 'bar', scopes: ['source.sqr', 'string.quoted.single.sqr']
+    expect(tokens[4]).toEqual value: "'", scopes: ['source.sqr', 'string.quoted.single.sqr', 'punctuation.definition.string.end.sqr']

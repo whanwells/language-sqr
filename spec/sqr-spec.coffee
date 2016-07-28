@@ -13,14 +13,14 @@ describe 'SQR grammar', ->
 
   it 'tokenizes comments', ->
     {tokens} = grammar.tokenizeLine '! foo'
-    expect(tokens[0]).toEqual value: '! foo', scopes: ['source.sqr', 'comment.line.double-slash.SQR']
+    expect(tokens[0]).toEqual value: '! foo', scopes: ['source.sqr', 'comment.line.double-slash.sqr']
 
   it 'tokenizes variables', ->
     glyphs = ['#', '$']
 
     for glyph in glyphs
       {tokens} = grammar.tokenizeLine "#{glyph}foo"
-      expect(tokens[0]).toEqual value: "#{glyph}foo", scopes: ['source.sqr', 'variable.language.SQR']
+      expect(tokens[0]).toEqual value: "#{glyph}foo", scopes: ['source.sqr', 'variable.language.sqr']
 
   it 'tokenizes keywords', ->
     keywords = [
@@ -49,14 +49,14 @@ describe 'SQR grammar', ->
 
     for keyword in keywords
       {tokens} = grammar.tokenizeLine keyword
-      expect(tokens[0]).toEqual value: keyword, scopes: ['source.sqr', 'keyword.control.SQR']
+      expect(tokens[0]).toEqual value: keyword, scopes: ['source.sqr', 'keyword.control.sqr']
 
   it 'tokenizes \\#include', ->
     {tokens} = grammar.tokenizeLine '#include'
-    expect(tokens[0]).toEqual value: '#include', scopes: ['source.sqr', 'meta.preprocessor.SQR.include']
+    expect(tokens[0]).toEqual value: '#include', scopes: ['source.sqr', 'meta.preprocessor.sqr.include']
 
   it 'tokenizes strings', ->
     {tokens} = grammar.tokenizeLine "'foo'"
-    expect(tokens[0]).toEqual value: "'", scopes: ['source.sqr', 'string.quoted.single.SQR']
-    expect(tokens[1]).toEqual value: 'foo', scopes: ['source.sqr', 'string.quoted.single.SQR']
-    expect(tokens[2]).toEqual value: "'", scopes: ['source.sqr', 'string.quoted.single.SQR']
+    expect(tokens[0]).toEqual value: "'", scopes: ['source.sqr', 'string.quoted.single.sqr']
+    expect(tokens[1]).toEqual value: 'foo', scopes: ['source.sqr', 'string.quoted.single.sqr']
+    expect(tokens[2]).toEqual value: "'", scopes: ['source.sqr', 'string.quoted.single.sqr']

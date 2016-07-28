@@ -9,64 +9,64 @@
 'patterns': [
   {
     'match': '!.*\\n'
-    'name': 'comment.line.double-slash.SQR'
+    'name': 'comment.line.double-slash.sqr'
   }
   {
     'match': '(?i)\\b(?:end-if|let|begin-procedure|end-procedure|do|show|else|call|using|print|goto|begin-report|end-report|begin-heading|end-heading|end-select|end-sql|begin-select|begin-sql|if)\\b'
-    'name': 'keyword.control.SQR'
+    'name': 'keyword.control.sqr'
   }
   {
     'match': '(?i)#\\b(?:ifdef|end-if)\\b'
-    'name': 'keyword.control.SQR'
+    'name': 'keyword.control.sqr'
   }
   {
     'begin': '#include'
     'captures':
       '1':
-        'name': 'keyword.control.import.include.SQR'
+        'name': 'keyword.control.import.include.sqr'
     'end': '(?=(?://|/\\*))|$'
-    'name': 'meta.preprocessor.SQR.include'
+    'name': 'meta.preprocessor.sqr.include'
     'patterns': [
       {
         'match': '(?>\\\\\\s*\\n)'
-        'name': 'punctuation.separator.continuation.SQR'
+        'name': 'punctuation.separator.continuation.sqr'
       }
       {
         'begin': '"'
         'beginCaptures':
           '0':
-            'name': 'punctuation.definition.string.begin.SQR'
+            'name': 'punctuation.definition.string.begin.sqr'
         'end': '"'
         'endCaptures':
           '0':
-            'name': 'punctuation.definition.string.end.SQR'
-        'name': 'string.quoted.double.include.SQR'
+            'name': 'punctuation.definition.string.end.sqr'
+        'name': 'string.quoted.double.include.sqr'
       }
     ]
   }
   {
     'match': '(#|\\$)[\\w-]+'
-    'name': 'variable.language.SQR'
+    'name': 'variable.language.sqr'
   }
   {
     'begin': '"'
     'end': '"'
-    'name': 'string.quoted.double.SQR'
+    'name': 'string.quoted.double.sqr'
     'patterns': [
       {
         'match': '\\\\.'
-        'name': 'constant.character.escape.SQR'
+        'name': 'constant.character.escape.sqr'
       }
     ]
   }
   {
     'begin': '\''
     'end': '\''
-    'name': 'string.quoted.single.SQR'
+    'name': 'string.quoted.single.sqr'
     'patterns': [
       {
         'match': '\\\\.'
-        'name': 'constant.character.escape.SQR'
+        'name': 'constant.character.escape.sqr'
       }
     ]
   }

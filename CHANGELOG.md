@@ -1,3 +1,6 @@
+### 0.4.0
+  - Updated grammar so all tests pass
+
 ### 0.3.0
   - Fixed snippets
 

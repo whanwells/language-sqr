@@ -12,15 +12,15 @@ patterns: [
     name: "comment.line.double-slash.SQR"
   }
   {
-    match: "(#|\\$)[\\w-]+"
-    name: "variable.language.SQR"
-  }
-  {
-    match: "(?i)\\b(end-if|let|begin-procedure|end-procedure|do|show|else|call|using|print|goto|begin-report|end-report|begin-heading|end-heading|end-select|end-sql|begin-select|begin-sql|\\#ifdef|\\#end-if|if)\\b\\s+"
+    match: "(?i)\\b(?:end-if|let|begin-procedure|end-procedure|do|show|else|call|using|print|goto|begin-report|end-report|begin-heading|end-heading|end-select|end-sql|begin-select|begin-sql|if)\\b"
     name: "keyword.control.SQR"
   }
   {
-    begin: "^\\s#include\\s+"
+    match: '(?i)#\\b(?:ifdef|end-if)\\b'
+    name: 'keyword.control.SQR'
+  }
+  {
+    begin: "#include"
     captures:
       "1":
         name: "keyword.control.import.include.SQR"
@@ -43,6 +43,10 @@ patterns: [
         name: "string.quoted.double.include.SQR"
       }
     ]
+  }
+  {
+    match: "(#|\\$)[\\w-]+"
+    name: "variable.language.SQR"
   }
   {
     begin: "\""

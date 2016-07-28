@@ -1,3 +1,6 @@
+### 0.5.0
+  - Toggle comment support
+
 ### 0.4.0
   - Updated grammar so all tests pass
 

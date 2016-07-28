@@ -8,8 +8,11 @@
 'foldingStopMarker': '(?i)^\\s*+(end-procedure|end-if|end-report|end-heading|end-select|end-sql|#end-if).*'
 'patterns': [
   {
-    'match': '!.*\\n'
-    'name': 'comment.line.double-slash.sqr'
+    'captures':
+      '1':
+        'name': 'punctuation.definition.comment.sqr'
+    'match': '(!).*$\\n?'
+    'name': 'comment.line.bang.sqr'
   }
   {
     'match': '(?i)\\b(?:end-if|let|begin-procedure|end-procedure|do|show|else|call|using|print|goto|begin-report|end-report|begin-heading|end-heading|end-select|end-sql|begin-select|begin-sql|if)\\b'

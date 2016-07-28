@@ -13,7 +13,8 @@ describe 'SQR grammar', ->
 
   it 'tokenizes comments', ->
     {tokens} = grammar.tokenizeLine '! foo'
-    expect(tokens[0]).toEqual value: '! foo', scopes: ['source.sqr', 'comment.line.double-slash.sqr']
+    expect(tokens[0]).toEqual value: '!', scopes: ['source.sqr', 'comment.line.bang.sqr', 'punctuation.definition.comment.sqr']
+    expect(tokens[1]).toEqual value: ' foo', scopes: ['source.sqr', 'comment.line.bang.sqr']
 
   it 'tokenizes variables', ->
     glyphs = ['#', '$']

@@ -59,6 +59,15 @@
     'name': 'variable.other.sqr'
   }
   {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.constant.begin.sqr'
+      '2':
+        'name': 'punctuation.definition.constant.end.sqr'
+    'match': '({)[\\w-]+(})'
+    'name': 'constant.other.sqr'
+  }
+  {
     'begin': '\''
     'beginCaptures':
       '0':

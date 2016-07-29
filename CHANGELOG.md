@@ -1,5 +1,5 @@
 ### 0.7.0
-  - Numeric literals are now highlighted
+  - Numeric literals and constants are now highlighted
 
 ### 0.6.0
   - All variable types are recognized

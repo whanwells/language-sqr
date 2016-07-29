@@ -24,6 +24,12 @@ describe 'SQR grammar', ->
       expect(tokens[0]).toEqual value: glyph, scopes: ['source.sqr', 'variable.other.sqr', 'punctuation.definition.variable.sqr']
       expect(tokens[1]).toEqual value: 'foo', scopes: ['source.sqr', 'variable.other.sqr']
 
+  it 'tokenizes constants', ->
+    {tokens} = grammar.tokenizeLine '{foo}'
+    expect(tokens[0]).toEqual value: '{', scopes: ['source.sqr', 'constant.other.sqr', 'punctuation.definition.constant.begin.sqr']
+    expect(tokens[1]).toEqual value: 'foo', scopes: ['source.sqr', 'constant.other.sqr']
+    expect(tokens[2]).toEqual value: '}', scopes: ['source.sqr', 'constant.other.sqr', 'punctuation.definition.constant.end.sqr']
+
   it 'tokenizes keywords', ->
     keywords = [
       'end-if'

@@ -42,8 +42,6 @@ describe 'SQR grammar', ->
       'using'
       'print'
       'goto'
-      'begin-report'
-      'end-report'
       'begin-heading'
       'end-heading'
       'end-select'
@@ -58,6 +56,16 @@ describe 'SQR grammar', ->
     for keyword in keywords
       {tokens} = grammar.tokenizeLine keyword
       expect(tokens[0]).toEqual value: keyword, scopes: ['source.sqr', 'keyword.control.sqr']
+
+  it 'tokenizes deprecated keywords', ->
+    keywords = [
+      'begin-report'
+      'end-report'
+    ]
+
+    for keyword in keywords
+      {tokens} = grammar.tokenizeLine keyword
+      expect(tokens[0]).toEqual value: keyword, scopes: ['source.sqr', 'invalid.deprecated.sqr']
 
   it 'tokenizes \\#include', ->
     {tokens} = grammar.tokenizeLine '#include'

@@ -5,9 +5,6 @@
   'begin-procedure ... end-procedure':
     'prefix': 'proc'
     'body': 'begin-procedure $1\n\t$0\nend-procedure'
-  'begin-report ... end-report':
-    'prefix': 'rep'
-    'body': 'begin-report\n\t$0\nend-report'
   'begin-select ... end-select':
     'prefix': 'sel'
     'body': 'begin-select\n$0\nend-select'

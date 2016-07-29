@@ -14,3 +14,6 @@
   'if ... end-if':
     'prefix': 'if'
     'body': 'if ${1:condition}\n\t$0\nend-if'
+  'if ... else ... end-if':
+    'prefix': 'ife'
+    'body': 'if ${1:condition}\n\t$2\nelse\n\t$3\nend-if'

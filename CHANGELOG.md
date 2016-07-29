@@ -1,5 +1,6 @@
 ### 0.8.0
   - Deprecated `begin-report ... end-report`
+  - New snippet: `if ... else ... end-if`
 
 ### 0.7.0
   - Numeric literals and constants are now highlighted

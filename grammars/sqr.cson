@@ -15,6 +15,10 @@
     'name': 'comment.line.bang.sqr'
   }
   {
+    'match': '[\\+-]?(?:\\d+\\.?\\d*|\\.\\d+)(?:[Ee][\\+-]?\\d+)?'
+    'name': 'constant.numeric.sqr'
+  }
+  {
     'match': '(?i)\\b(?:end-if|let|begin-procedure|end-procedure|do|show|else|call|using|print|goto|begin-report|end-report|begin-heading|end-heading|end-select|end-sql|begin-select|begin-sql|if)\\b'
     'name': 'keyword.control.sqr'
   }

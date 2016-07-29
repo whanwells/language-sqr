@@ -1,3 +1,6 @@
+### 0.7.0
+  - Numeric literals are now highlighted
+
 ### 0.6.0
   - All variable types are recognized
   - Escaped single quotes are now highlighted in string literals

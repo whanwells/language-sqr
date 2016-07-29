@@ -64,3 +64,20 @@ describe 'SQR grammar', ->
     expect(tokens[2]).toEqual value: "''", scopes: ['source.sqr', 'string.quoted.single.sqr', 'constant.character.escape.sqr']
     expect(tokens[3]).toEqual value: 'bar', scopes: ['source.sqr', 'string.quoted.single.sqr']
     expect(tokens[4]).toEqual value: "'", scopes: ['source.sqr', 'string.quoted.single.sqr', 'punctuation.definition.string.end.sqr']
+
+  it 'tokenizes numbers', ->
+    numbers = [
+      '12',
+      '.12'
+      '12.'
+      '12.3'
+      '+12'
+      '-12'
+      '12e34'
+      '12e+34'
+      '12e-34'
+    ]
+
+    for number in numbers
+      {tokens} = grammar.tokenizeLine number
+      expect(tokens[0]).toEqual value: number, scopes: ['source.sqr', 'constant.numeric.sqr']

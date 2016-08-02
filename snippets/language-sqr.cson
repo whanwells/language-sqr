@@ -17,3 +17,9 @@
   'if ... else ... end-if':
     'prefix': 'ife'
     'body': 'if ${1:condition}\n\t$2\nelse\n\t$3\nend-if'
+  'evaluate ... end-evaluate':
+    'prefix': 'eval'
+    'body': 'evaluate ${1:value}\nwhen ${2:condition}\n\t$0\n\end-evaluate'
+  'while ... end-while':
+    'prefix': 'while'
+    'body': 'while ${1:condition}\n\t$0\nend-while'

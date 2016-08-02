@@ -23,11 +23,11 @@
     'name': 'invalid.deprecated.sqr'
   }
   {
-    'match': '(?i)\\b(?:end-if|let|begin-procedure|end-procedure|do|show|else|call|using|print|goto|begin-heading|end-heading|end-select|end-sql|begin-select|begin-sql|if)\\b'
+    'match': '(?i)(?:\\b(?:(?:end-)?(?:if|evaluate|while)|break|else|when(?:-other)?)\\b|#(?:if(?:n?def)?|else|end-?if))'
     'name': 'keyword.control.sqr'
   }
   {
-    'match': '(?i)#\\b(?:ifdef|end-if)\\b'
+    'match': '(?i)\\b(?:let|begin-procedure|end-procedure|do|show|call|using|print|goto|begin-heading|end-heading|end-select|end-sql|begin-select|begin-sql)\\b'
     'name': 'keyword.control.sqr'
   }
   {

@@ -30,27 +30,43 @@ describe 'SQR grammar', ->
     expect(tokens[1]).toEqual value: 'foo', scopes: ['source.sqr', 'constant.other.sqr']
     expect(tokens[2]).toEqual value: '}', scopes: ['source.sqr', 'constant.other.sqr', 'punctuation.definition.constant.end.sqr']
 
-  it 'tokenizes keywords', ->
+  it 'tokenizes control keywords', ->
     keywords = [
-      'end-if'
-      'let'
-      'begin-procedure'
-      'end-procedure'
-      'do'
+      'if'
       'else'
-      'call'
-      'using'
-      'print'
-      'goto'
+      'end-if'
+
+      'evaluate'
+      'when'
+      'when-other'
+      'break'
+      'end-evaluate'
+
+      'while'
+      'end-while'
+
+      '#if'
+      '#ifdef'
+      '#ifndef'
+      '#else'
+      '#endif'
+      '#end-if'
+
       'begin-heading'
       'end-heading'
-      'end-select'
-      'end-sql'
+      'begin-procedure'
+      'end-procedure'
       'begin-select'
+      'end-select'
       'begin-sql'
-      '#ifdef'
-      '#end-if'
-      'if'
+      'end-sql'
+
+      'do'
+      'call'
+      'goto'
+      'let'
+      'print'
+      'using'
     ]
 
     for keyword in keywords

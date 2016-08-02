@@ -1,4 +1,6 @@
 ### 0.8.0
+  - Added full highlighting for conditional compilation constructs
+  - `evaluate` and `while` control structures are now highlighted
   - Deprecated `begin-report ... end-report`
   - New snippet: `if ... else ... end-if`
 

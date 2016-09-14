@@ -27,7 +27,7 @@
     'name': 'keyword.control.sqr'
   }
   {
-    'match': '(?i)\\b(?:let|begin-procedure|end-procedure|do|show|call|using|print|goto|begin-heading|end-heading|end-select|end-sql|begin-select|begin-sql)\\b'
+    'match': '(?i)\\b(?:let|begin-program|end-program|begin-procedure|end-procedure|do|show|call|stop|stop-quiet|using|print|goto|begin-heading|end-heading|end-select|end-sql|begin-select|begin-sql)\\b'
     'name': 'keyword.control.sqr'
   }
   {

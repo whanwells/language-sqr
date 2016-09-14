@@ -2,6 +2,9 @@
   'begin-heading ... end-heading':
     'prefix': 'head'
     'body': 'begin-heading $1\n\t$0\nend-heading'
+  'begin-program ... end-program':
+    'prefix': 'prog'
+    'body': 'begin-program $1\n\t$0\nend-program'
   'begin-procedure ... end-procedure':
     'prefix': 'proc'
     'body': 'begin-procedure $1\n\t$0\nend-procedure'

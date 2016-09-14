@@ -54,6 +54,8 @@ describe 'SQR grammar', ->
 
       'begin-heading'
       'end-heading'
+      'begin-program'
+      'end-program'
       'begin-procedure'
       'end-procedure'
       'begin-select'
@@ -65,6 +67,8 @@ describe 'SQR grammar', ->
       'call'
       'goto'
       'let'
+      'stop'
+      'stop-quiet'
       'print'
       'using'
     ]

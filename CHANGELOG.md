@@ -1,3 +1,9 @@
+### 0.9.0
+  - Added support for highlighting 'begin-program' 'end-program'
+  - Added support for highlighting 'stop' and 'stop-quiet'
+  - New snippets:
+    - 'begin-program ... end-program'
+
 ### 0.8.0
   - Added full highlighting for conditional compilation constructs
   - `evaluate` and `while` control structures are now highlighted

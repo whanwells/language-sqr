@@ -4,8 +4,8 @@
   'sqr'
   'sqc'
 ]
-'foldingStartMarker': '(?i)^\\s*+(begin-procedure|if|begin-report|begin-heading|begin-select|begin-sql|#ifdef).*'
-'foldingStopMarker': '(?i)^\\s*+(end-procedure|end-if|end-report|end-heading|end-select|end-sql|#end-if).*'
+'foldingStartMarker': '(?i)^\\s*+(begin-program|begin-procedure|if|begin-report|begin-heading|begin-select|begin-sql|#ifdef).*'
+'foldingStopMarker': '(?i)^\\s*+(end-program|end-procedure|end-if|end-report|end-heading|end-select|end-sql|#end-if).*'
 'patterns': [
   {
     'captures':

@@ -1,0 +1,30 @@
+{
+  "env": {
+    "atomtest": true,
+    "es6": true,
+    "jasmine": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "atom": true
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ]
+  }
+}

@@ -44,11 +44,11 @@
     },
     {
       "name": "keyword.control.sqr",
-      "match": "(?i)\\b(?:break|call|do|else|goto|let|print|show|using|when(?:-other)?)\\b"
+      "match": "(?i)\\b(?:break|call|do|else|goto|let|move|print|show|stop(?:-quiet)?|to|using|when(?:-other)?)\\b"
     },
     {
       "name": "keyword.control.sqr",
-      "match": "(?i)\\b(?:begin|end)-(?:heading|procedure|select|sql)\\b"
+      "match": "(?i)\\b(?:begin|end)-(?:heading|procedure|program|select|sql)\\b"
     },
     {
       "name": "invalid.deprecated.sqr",

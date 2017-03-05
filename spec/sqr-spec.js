@@ -79,6 +79,7 @@ describe('SQR grammar', () => {
       '#else',
       '#endif',
       '#end-if',
+      '#include',
 
       'begin-heading',
       'end-heading',
@@ -125,13 +126,6 @@ describe('SQR grammar', () => {
       expect(tokens[0].value).toBe(keyword);
       expect(tokens[0].scopes).toEqual(scopes);
     });
-  });
-
-  it('tokenizes \\#include', () => {
-    const {tokens} = grammar.tokenizeLine('#include');
-    const scopes = ['source.sqr', 'meta.preprocessor.sqr.include'];
-    expect(tokens[0].value).toBe('#include');
-    expect(tokens[0].scopes).toEqual(scopes);
   });
 
   it('tokenizes strings', () => {

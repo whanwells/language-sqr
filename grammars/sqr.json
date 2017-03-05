@@ -17,11 +17,7 @@
     },
     {
       "name": "keyword.control.sqr",
-      "match": "(?i)#(?:if(?:n?def)?|else|end-?if)"
-    },
-    {
-      "name": "meta.preprocessor.sqr.include",
-      "match": "(?i)#include.*$"
+      "match": "(?i)#(?:if(?:n?def)?|else|end-?if|include)"
     },
     {
       "name": "variable.other.sqr",

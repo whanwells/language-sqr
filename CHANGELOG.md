@@ -1,3 +1,17 @@
+### 0.9.1
+  - Updated `CHANGELOG.md`
+
+### 0.9.0
+  - Ported CSON to JSON and CoffeeScript to JavaScript
+  - Fixed bug with `#include`
+  - New keywords:
+    - `move`
+    - `to`
+    - `stop`
+    - `stop-quiet`
+  - New snippet:
+    - `begin-program ... end-program`
+
 ### 0.8.0
   - Added full highlighting for conditional compilation constructs
   - `evaluate` and `while` control structures are now highlighted

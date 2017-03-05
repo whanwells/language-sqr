@@ -1,0 +1,79 @@
+{
+  "scopeName": "source.sqr",
+  "name": "SQR",
+  "fileTypes": [
+    "sqr",
+    "sqc"
+  ],
+  "foldingStartMarker": "(?i)^\\s*(?:begin-(?:heading|procedure|report)|if|evaluate|while|#ifdef)",
+  "foldingStopMarker": "(?i)^\\s*(?:end-(?:heading|procedure|report|if|evaluate|while)|#end-if)",
+  "patterns": [
+    {
+      "name": "comment.line.bang.sqr",
+      "match": "(!).*\n?$",
+      "captures": {
+        "1": { "name": "punctuation.definition.comment.sqr" }
+      }
+    },
+    {
+      "name": "keyword.control.sqr",
+      "match": "(?i)#(?:if(?:n?def)?|else|end-?if)"
+    },
+    {
+      "name": "meta.preprocessor.sqr.include",
+      "match": "(?i)#include.*$"
+    },
+    {
+      "name": "variable.other.sqr",
+      "match": "(#|\\$|&|%|@)[\\w-]+",
+      "captures": {
+        "1": { "name": "punctuation.definition.variable.sqr" }
+      }
+    },
+    {
+      "name": "constant.other.sqr",
+      "match": "({)[\\w-]+(})",
+      "captures": {
+        "1": { "name": "punctuation.definition.constant.begin.sqr" },
+        "2": { "name": "punctuation.definition.constant.end.sqr" }
+      }
+    },
+    {
+      "name": "keyword.control.sqr",
+      "match": "(?i)\\b(?:end-)?(?:if|evaluate|while)"
+    },
+    {
+      "name": "keyword.control.sqr",
+      "match": "(?i)\\b(?:break|call|do|else|goto|let|print|show|using|when(?:-other)?)\\b"
+    },
+    {
+      "name": "keyword.control.sqr",
+      "match": "(?i)\\b(?:begin|end)-(?:heading|procedure|select|sql)\\b"
+    },
+    {
+      "name": "invalid.deprecated.sqr",
+      "match": "(?i)\\b(?:begin|end)-report\\b"
+    },
+    {
+      "name": "string.quoted.single.sqr",
+      "begin": "'",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.sqr" }
+      },
+      "end": "'(?!')",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.sqr" }
+      },
+      "patterns": [
+        {
+          "name": "constant.character.escape.sqr",
+          "match": "''"
+        }
+      ]
+    },
+    {
+      "name": "constant.numeric.sqr",
+      "match": "[\\+-]?(?:\\d+\\.?\\d*|\\.\\d+)(?:[Ee][\\+-]?\\d+)?"
+    }
+  ]
+}

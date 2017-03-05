@@ -8,6 +8,10 @@
       "prefix": "proc",
       "body": "begin-procedure $1\n\t$0\nend-procedure"
     },
+    "begin-program ... end-program": {
+      "prefix": "prog",
+      "body": "begin-program\n\t$0\nend-program"
+    },
     "begin-select ... end-select": {
       "prefix": "sel",
       "body": "begin-select\n$0\nend-select"

@@ -1,3 +1,6 @@
+### 0.9.2
+  - Fixed control statement word boundaries
+
 ### 0.9.1
   - Updated `CHANGELOG.md`
 

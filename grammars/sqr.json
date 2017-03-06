@@ -36,7 +36,7 @@
     },
     {
       "name": "keyword.control.sqr",
-      "match": "(?i)\\b(?:end-)?(?:if|evaluate|while)"
+      "match": "(?i)\\b(?:end-)?(?:if|evaluate|while)\\b"
     },
     {
       "name": "keyword.control.sqr",

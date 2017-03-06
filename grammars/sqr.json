@@ -5,8 +5,8 @@
     "sqr",
     "sqc"
   ],
-  "foldingStartMarker": "(?i)^\\s*(?:begin-(?:heading|procedure|report)|if|evaluate|while|#ifdef)",
-  "foldingStopMarker": "(?i)^\\s*(?:end-(?:heading|procedure|report|if|evaluate|while)|#end-if)",
+  "foldingStartMarker": "(?i)^\\s*(?:begin-(?:heading|procedure|report)|if|evaluate|while|#(?:if(?:n?def)?)",
+  "foldingStopMarker": "(?i)^\\s*(?:end-(?:heading|procedure|report|if|evaluate|while)|#end-?if)",
   "patterns": [
     {
       "name": "comment.line.bang.sqr",

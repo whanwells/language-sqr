@@ -1,5 +1,6 @@
 ### 0.9.2
   - Fixed control statement word boundaries
+  - Updated folding markers for `#if`, `#ifndef`, and `#endif`
 
 ### 0.9.1
   - Updated `CHANGELOG.md`
